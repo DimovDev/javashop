@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
  * Admin Route
 */
 Route::prefix('admin')->group(function(){
-    Route::middleware('guest:admin')->group(function(){
+    Route::middleware('auth:admin')->group(function(){
         //dashboard route
         Route::get('/','dashboardController@index');
 
